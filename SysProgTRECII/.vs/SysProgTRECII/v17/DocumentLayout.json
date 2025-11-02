@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SysProgPROJ\\SysProgTRECII\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|D:\\SysProgPROJ\\SysProgTRECII\\sysprogtrecii\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|solutionrelative:sysprogtrecii\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|D:\\SysProgPROJ\\SysProgTRECII\\sysprogtrecii\\services\\itextsentiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|solutionrelative:sysprogtrecii\\services\\itextsentiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|D:\\SysProgPROJ\\SysProgTRECII\\sysprogtrecii\\services\\textsentiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|solutionrelative:sysprogtrecii\\services\\textsentiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|d:\\sysprogproj\\sysprogtrecii\\sysprogtrecii\\web\\apiserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|solutionrelative:sysprogtrecii\\web\\apiserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|D:\\SysProgPROJ\\SysProgTRECII\\sysprogtrecii\\services\\newsclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|solutionrelative:sysprogtrecii\\services\\newsclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|D:\\SysProgPROJ\\SysProgTRECII\\sysprogtrecii\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212F191F-1C64-48C3-8038-F75EB726E70C}|SysProgTRECII\\SysProgTRECII.csproj|solutionrelative:sysprogtrecii\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NewsClient.cs",
+              "DocumentMoniker": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Services\\NewsClient.cs",
+              "RelativeDocumentMoniker": "SysProgTRECII\\Services\\NewsClient.cs",
+              "ToolTip": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Services\\NewsClient.cs",
+              "RelativeToolTip": "SysProgTRECII\\Services\\NewsClient.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T00:01:47.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Program.cs",
+              "RelativeDocumentMoniker": "SysProgTRECII\\Program.cs",
+              "ToolTip": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Program.cs",
+              "RelativeToolTip": "SysProgTRECII\\Program.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T23:29:20.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApiServer.cs",
+              "DocumentMoniker": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Web\\ApiServer.cs",
+              "RelativeDocumentMoniker": "SysProgTRECII\\Web\\ApiServer.cs",
+              "ToolTip": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Web\\ApiServer.cs",
+              "RelativeToolTip": "SysProgTRECII\\Web\\ApiServer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T23:21:30.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TextSentiment.cs",
+              "DocumentMoniker": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Services\\TextSentiment.cs",
+              "RelativeDocumentMoniker": "SysProgTRECII\\Services\\TextSentiment.cs",
+              "ToolTip": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Services\\TextSentiment.cs",
+              "RelativeToolTip": "SysProgTRECII\\Services\\TextSentiment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T23:21:25.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ITextSentiment.cs",
+              "DocumentMoniker": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Services\\ITextSentiment.cs",
+              "RelativeDocumentMoniker": "SysProgTRECII\\Services\\ITextSentiment.cs",
+              "ToolTip": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Services\\ITextSentiment.cs",
+              "RelativeToolTip": "SysProgTRECII\\Services\\ITextSentiment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T23:21:23.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Item.cs",
+              "DocumentMoniker": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "SysProgTRECII\\Models\\Item.cs",
+              "ToolTip": "D:\\SysProgPROJ\\SysProgTRECII\\SysProgTRECII\\Models\\Item.cs",
+              "RelativeToolTip": "SysProgTRECII\\Models\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T23:21:22.003Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

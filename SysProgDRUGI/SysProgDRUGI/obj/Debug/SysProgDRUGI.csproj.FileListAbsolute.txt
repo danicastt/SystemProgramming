@@ -1,0 +1,7 @@
+D:\SysProgPROJ\SysProgDRUGI\SysProgDRUGI\obj\Debug\SysProgDRUGI.csproj.AssemblyReference.cache
+D:\SysProgPROJ\SysProgDRUGI\SysProgDRUGI\obj\Debug\SysProgDRUGI.csproj.CoreCompileInputs.cache
+D:\SysProgPROJ\SysProgDRUGI\SysProgDRUGI\bin\Debug\SysProgDRUGI.exe.config
+D:\SysProgPROJ\SysProgDRUGI\SysProgDRUGI\bin\Debug\SysProgDRUGI.exe
+D:\SysProgPROJ\SysProgDRUGI\SysProgDRUGI\bin\Debug\SysProgDRUGI.pdb
+D:\SysProgPROJ\SysProgDRUGI\SysProgDRUGI\obj\Debug\SysProgDRUGI.exe
+D:\SysProgPROJ\SysProgDRUGI\SysProgDRUGI\obj\Debug\SysProgDRUGI.pdb

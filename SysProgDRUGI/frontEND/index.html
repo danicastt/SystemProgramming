@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>•Air Quality•</title>
+  <style>
+    :root{
+      --bg:#0b0c10; --panel:#111319; --muted:#9aa3af; --text:#e5e7eb;
+      --accent:#6ee7b7; --border:#20232b; --ring:#2a2f3a;
+      --shadow: 0 10px 30px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:radial-gradient(1200px 600px at 10% -10%, #182032, transparent),
+                 radial-gradient(800px 400px at 100% 0, #1a1f2b, transparent), var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      color:var(--text); line-height:1.45; padding:24px;
+    }
+    .container{max-width:980px; margin:0 auto}
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px}
+    h1{margin:0; font-size:clamp(22px, 3vw, 30px); letter-spacing:.3px}
+    .panel{background:linear-gradient(180deg, #121622, #0f1220); border:1px solid var(--border); border-radius:16px; box-shadow:var(--shadow)}
+    .panel .inner{padding:18px}
+    .row{display:grid; grid-template-columns:repeat(3, minmax(180px, 1fr)); gap:12px}
+    label{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
+    input{width:100%; padding:.7rem .85rem; background:#0d101b; color:var(--text); border:1px solid #1d2432; border-radius:10px; outline:none}
+    input:focus{border-color:#374151; box-shadow:0 0 0 4px #0b1226}
+    .actions{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
+    button{border:0; cursor:pointer; border-radius:10px; padding:.7rem 1rem; font-weight:600; background:#1b1f2b; color:#e5e7eb; border:1px solid #2a2f3a; transition:.15s ease}
+    button.primary{background:#2563eb; border-color:#1f4ec9}
+    button:hover{transform:translateY(-1px)}
+    button:disabled{opacity:.6; cursor:not-allowed; transform:none}
+    .result{margin-top:18px}
+    .card{border-top:1px solid var(--border)}
+    .card .inner{padding:18px}
+    .title{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px}
+    .subtitle{color:var(--muted); font-size:13px}
+    .grid{display:grid; gap:10px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))}
+    .kpi{background:#0c0f19; border:1px solid #1b2130; padding:12px; border-radius:12px}
+    .kpi small{display:block; color:var(--muted); margin-bottom:6px; font-size:12px}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:.25rem .6rem; border-radius:999px; font-weight:700; border:1px solid rgba(255,255,255,.12); background:#0f1320; font-variant-numeric:tabular-nums}
+    .aqi-good{background:#083c18; border-color:#0f6b2b; color:#c7f9cc}
+    .aqi-mod{background:#3b3301; border-color:#7c6b06; color:#fff2b3}
+    .aqi-usg{background:#432403; border-color:#9b5d14; color:#ffe0b3}
+    .aqi-unh{background:#4a0f12; border-color:#b3262a; color:#ffd2d2}
+    .aqi-very{background:#330a3b; border-color:#7a2ea1; color:#f3d8ff}
+    .aqi-haz{background:#2b1107; border-color:#6b3a1f; color:#ffe2cc}
+    .muted{color:var(--muted); font-size:13px}
+    .json{white-space:pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:#0b0e17; border:1px solid #1b2130; border-radius:12px; padding:14px; overflow:auto}
+    .error{background:#2a0f12; border:1px solid #6e1f25; color:#ffd8d8; padding:.8rem 1rem; border-radius:12px; margin-top:12px}
+    @media (max-width:640px){ .row{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>•Air Quality•</h1>
+    </header>
+
+    <!-- FORM -->
+    <section class="panel">
+      <div class="inner">
+        <p class="subtitle">Poziva <code>http://localhost:5500/city?city=...&state=...&country=...</code> i prikazuje rezultat.</p>
+
+        <div class="row">
+          <div>
+            <label>City</label>
+            <input id="city" placeholder="npr. Nis" />
+          </div>
+          <div>
+            <label>State</label>
+            <input id="state" placeholder="npr. Central Serbia" />
+          </div>
+          <div>
+            <label>Country</label>
+            <input id="country" placeholder="npr. Serbia" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="primary" id="btn">Proveri</button>
+          <button id="btnClear">Očisti</button>
+        </div>
+
+        <div id="msg" class="error" style="display:none"></div>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section class="panel result" id="result" style="display:none">
+      <div class="inner">
+        <div class="title">
+          <h2 id="place" style="margin:0; font-size:20px"></h2>
+          <span class="muted" id="time"></span>
+        </div>
+
+        <div class="grid">
+          <div class="kpi">
+            <small>AQI (US)</small>
+            <span id="aqi" class="pill">–</span>
+          </div>
+          <div class="kpi">
+            <small>Glavni zagađivač</small>
+            <div id="main">–</div>
+          </div>
+          <div class="kpi">
+            <small>Temp (°C)</small>
+            <div id="tp">–</div>
+          </div>
+          <div class="kpi">
+            <small>Vlažnost (%)</small>
+            <div id="hu">–</div>
+          </div>
+          <div class="kpi">
+            <small>Pritisak (hPa)</small>
+            <div id="pr">–</div>
+          </div>
+          <div class="kpi">
+            <small>Vetar (m/s)</small>
+            <div id="ws">–</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <details>
+            <summary class="muted">RAW JSON</summary>
+            <pre id="raw" class="json"></pre>
+          </details>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<script>
+  // ========== helpers ==========
+  const $ = sel => document.querySelector(sel);
+  const enc = v => encodeURIComponent(String(v||"").trim());
+
+  function aqiClass(aqi){
+    if (aqi <= 50)  return 'aqi-good';
+    if (aqi <= 100) return 'aqi-mod';
+    if (aqi <= 150) return 'aqi-usg';
+    if (aqi <= 200) return 'aqi-unh';
+    if (aqi <= 300) return 'aqi-very';
+    return 'aqi-haz';
+  }
+
+  function setLoading(is){
+    const btn = $('#btn');
+    btn.disabled = is;
+    btn.textContent = is ? 'Učitavanje…' : 'Proveri';
+  }
+
+  function saveForm(){
+    localStorage.setItem('aq_city', $('#city').value);
+    localStorage.setItem('aq_state', $('#state').value);
+    localStorage.setItem('aq_country', $('#country').value);
+  }
+  function loadForm(){
+    $('#city').value = localStorage.getItem('aq_city') ?? 'Nis';
+    $('#state').value = localStorage.getItem('aq_state') ?? 'Central Serbia';
+    $('#country').value = localStorage.getItem('aq_country') ?? 'Serbia';
+  }
+
+  // ========== main ==========
+  async function load(city, state, country){
+    $('#msg').style.display = 'none';
+    setLoading(true);
+    try{
+      const url = `http://localhost:5500/city?city=${enc(city)}&state=${enc(state)}&country=${enc(country)}`;
+      const res = await fetch(url);
+      if(!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+
+      const d = data?.data ?? {};
+      const p = d?.current?.pollution ?? {};
+      const w = d?.current?.weather ?? {};
+
+      $('#place').textContent = [d.city, d.state, d.country].filter(Boolean).join(', ');
+      const ts = p.ts || w.ts;
+      $('#time').textContent = ts ? new Date(ts).toLocaleString() : '—';
+
+      const pill = $('#aqi');
+      pill.textContent = p.aqius ?? '—';
+      pill.className = `pill ${aqiClass(Number(p.aqius ?? 0))}`;
+
+      $('#main').textContent = p.mainus ?? '—';
+      $('#tp').textContent   = w.tp ?? '—';
+      $('#hu').textContent   = w.hu ?? '—';
+      $('#pr').textContent   = w.pr ?? '—';
+      $('#ws').textContent   = w.ws ?? '—';
+
+      $('#raw').textContent = JSON.stringify(data, null, 2);
+
+      $('#result').style.display = 'block';
+      saveForm();
+    }catch(e){
+      $('#msg').textContent = `Greška: ${e.message}`;
+      $('#msg').style.display = 'block';
+      $('#result').style.display = 'none';
+    }finally{
+      setLoading(false);
+    }
+  }
+
+  // ========== events ==========
+  $('#btn').onclick = () =>
+    load($('#city').value, $('#state').value, $('#country').value);
+
+  $('#btnClear').onclick = () => {
+    $('#city').value = '';
+    $('#state').value = '';
+    $('#country').value = '';
+    $('#result').style.display = 'none';
+  };
+
+  // init
+  loadForm();
+</script>
+</body>
+</html>

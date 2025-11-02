@@ -1,0 +1,14 @@
+D:\SysProgPROJ\SysProgPRVI\SysProgPRVI\bin\Debug\SysProgPRVI.exe.config
+D:\SysProgPROJ\SysProgPRVI\SysProgPRVI\bin\Debug\SysProgPRVI.exe
+D:\SysProgPROJ\SysProgPRVI\SysProgPRVI\bin\Debug\SysProgPRVI.pdb
+D:\SysProgPROJ\SysProgPRVI\SysProgPRVI\obj\Debug\SysProgPRVI.csproj.AssemblyReference.cache
+D:\SysProgPROJ\SysProgPRVI\SysProgPRVI\obj\Debug\SysProgPRVI.csproj.CoreCompileInputs.cache
+D:\SysProgPROJ\SysProgPRVI\SysProgPRVI\obj\Debug\SysProgPRVI.exe
+D:\SysProgPROJ\SysProgPRVI\SysProgPRVI\obj\Debug\SysProgPRVI.pdb
+C:\Users\Danica\Desktop\SysProgPRVI\SysProgPRVI\bin\Debug\SysProgPRVI.exe.config
+C:\Users\Danica\Desktop\SysProgPRVI\SysProgPRVI\bin\Debug\SysProgPRVI.exe
+C:\Users\Danica\Desktop\SysProgPRVI\SysProgPRVI\bin\Debug\SysProgPRVI.pdb
+C:\Users\Danica\Desktop\SysProgPRVI\SysProgPRVI\obj\Debug\SysProgPRVI.csproj.AssemblyReference.cache
+C:\Users\Danica\Desktop\SysProgPRVI\SysProgPRVI\obj\Debug\SysProgPRVI.csproj.CoreCompileInputs.cache
+C:\Users\Danica\Desktop\SysProgPRVI\SysProgPRVI\obj\Debug\SysProgPRVI.exe
+C:\Users\Danica\Desktop\SysProgPRVI\SysProgPRVI\obj\Debug\SysProgPRVI.pdb

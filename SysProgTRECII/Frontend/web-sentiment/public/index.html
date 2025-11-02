@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYT Most Popular – Sentiment Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>NYT Most Popular – Sentiment Dashboard</h1>
+    <p>Frontend spojen na tvoj .NET backend (Rx + ML.NET)</p>
+  </header>
+
+  <section class="controls">
+    <label>
+      Feed:
+      <select id="feed">
+        <option value="viewed" selected>viewed</option>
+        <option value="shared">shared</option>
+        <option value="emailed">emailed</option>
+      </select>
+    </label>
+
+    <label>
+      Period:
+      <select id="period">
+        <option value="1">1 day</option>
+        <option value="7" selected>7 days</option>
+        <option value="30">30 days</option>
+      </select>
+    </label>
+
+    <label>
+      Limit:
+      <input type="number" id="limit" value="40" min="1" max="100" />
+    </label>
+
+    <button id="loadBtn">Load</button>
+  </section>
+
+  <section id="stats" class="stats hidden"></section>
+  <section id="grid" class="grid"></section>
+
+  <footer>
+    <small>Podaci preko NYT Most Popular API; sentiment iz ML.NET na backendu.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
